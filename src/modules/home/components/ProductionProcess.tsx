@@ -1,3 +1,8 @@
+'use client';
+
+import Reveal from "@/modules/core/components/Reveal";
+import Stagger, { StaggerItem } from "@/modules/core/components/Stagger";
+
 export default function ProductionProcess() {
   const PROCESS_STEPS = [
     { title: "Selección", description: "Compra y recepción de materias primas.", image: "/images/proceso-01.jpg" },
@@ -13,45 +18,46 @@ export default function ProductionProcess() {
   return (
     <section className="py-20 bg-abu-bg border-t border-abu-line">
       <div className="w-full px-6 md:px-10 lg:px-16">
-        <div className="mb-12 max-w-lg">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-6 h-px bg-abu-gold" />
-            <span className="text-[11px] uppercase tracking-[0.25em] text-abu-gold font-semibold">
-              Cómo trabajamos
-            </span>
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-abu-white mb-3">
-            Nuestro Proceso
-          </h2>
-          <p className="text-abu-gray text-sm leading-relaxed">
-            Desde la selección del grano hasta la entrega en tu granja,
-            controlamos cada paso.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {PROCESS_STEPS.map((step, idx) => (
-            <div
-              key={idx}
-              className="group relative h-56 overflow-hidden bg-abu-card cursor-default hover:shadow-lg transition-all duration-300"
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-30 group-hover:opacity-50"
-                style={{ backgroundImage: `url(${step.image})` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-abu-bg via-abu-bg/60 to-transparent" />
-              <div className="absolute left-0 top-0 bottom-0 w-px bg-abu-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom z-10" />
-
-              <div className="absolute inset-0 p-4 flex flex-col justify-end z-10">
-                <div className="text-abu-gold font-extrabold text-3xl leading-none mb-1.5 opacity-30 group-hover:opacity-70 transition-opacity">
-                  {String(idx + 1).padStart(2, "0")}
-                </div>
-                <h3 className="text-sm font-bold text-abu-white mb-0.5">{step.title}</h3>
-                <p className="text-abu-gray text-[11px] leading-relaxed">{step.description}</p>
-              </div>
+        <Reveal direction="left">
+          <div className="mb-12 max-w-lg">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-6 h-px bg-abu-gold" />
+              <span className="text-[11px] uppercase tracking-[0.25em] text-abu-gold font-semibold">
+                Cómo trabajamos
+              </span>
             </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-abu-white mb-3">
+              Nuestro Proceso
+            </h2>
+            <p className="text-abu-gray text-sm leading-relaxed">
+              Desde la selección del grano hasta la entrega en tu granja,
+              controlamos cada paso.
+            </p>
+          </div>
+        </Reveal>
+
+        <Stagger className="grid grid-cols-2 md:grid-cols-4 gap-3" stagger={0.06}>
+          {PROCESS_STEPS.map((step, idx) => (
+            <StaggerItem key={idx}>
+              <div className="group relative h-56 overflow-hidden bg-abu-card cursor-default hover:shadow-lg transition-all duration-300">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-30 group-hover:opacity-50"
+                  style={{ backgroundImage: `url(${step.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-abu-bg via-abu-bg/60 to-transparent" />
+                <div className="absolute left-0 top-0 bottom-0 w-px bg-abu-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom z-10" />
+
+                <div className="absolute inset-0 p-4 flex flex-col justify-end z-10">
+                  <div className="text-abu-gold font-extrabold text-3xl leading-none mb-1.5 opacity-30 group-hover:opacity-70 transition-opacity duration-300">
+                    {String(idx + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="text-sm font-bold text-abu-white mb-0.5">{step.title}</h3>
+                  <p className="text-abu-gray text-[11px] leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

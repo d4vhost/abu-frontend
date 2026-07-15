@@ -1,3 +1,7 @@
+'use client';
+
+import { CountUp } from "@/modules/core/components/Animations";
+
 const STATS = [
   { value: "4", label: "Etapas nutricionales", suffix: "" },
   { value: "20", label: "Años de experiencia", suffix: "+" },
@@ -16,12 +20,11 @@ export default function Indicators() {
               className="flex flex-col items-center text-center lg:border-r lg:border-abu-line lg:last:border-0"
             >
               <div className="flex items-baseline gap-0.5 mb-1.5">
-                <span className="text-3xl md:text-4xl font-extrabold text-abu-gold leading-none">
-                  {stat.value}
-                </span>
-                {stat.suffix && (
-                  <span className="text-xl font-extrabold text-abu-gold-dim">{stat.suffix}</span>
-                )}
+                <CountUp
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  className="text-3xl md:text-4xl font-extrabold text-abu-gold leading-none"
+                />
               </div>
               <span className="text-[10px] uppercase tracking-[0.2em] text-abu-gray font-medium">
                 {stat.label}
