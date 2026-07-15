@@ -1,0 +1,119 @@
+import { products } from "@/data/products";
+import { notFound } from "next/navigation";
+import { CheckCircle2, ChevronLeft } from "lucide-react";
+import Link from "next/link";
+import { Metadata } from "next";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
+  if (!product) return { title: "Producto no encontrado" };
+  return { title: `${product.name} | A.B.U.` };
+}
+
+export default async function ProductDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
+
+  if (!product) {
+    notFound();
+  }
+
+  return (
+    <div className="pt-24 pb-20 bg-white min-h-screen">
+      <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+        <Link href="/productos" className="inline-flex items-center text-sm text-abu-charcoal/60 hover:text-abu-green mb-8 transition-colors">
+          <ChevronLeft className="w-4 h-4 mr-1" /> Volver al catálogo
+        </Link>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Image */}
+          <div>
+            <div className="relative rounded-2xl overflow-hidden aspect-square bg-abu-cream border border-abu-earth/10">
+              {product.images[0] && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img 
+                  src={product.images[0]} 
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </div>
+          </div>
+
+          {/* Info */}
+          <div className="flex flex-col">
+            <div className="mb-6">
+              <span className="inline-block px-3 py-1 bg-abu-corn/20 text-abu-green-dark text-xs font-bold rounded-full mb-4">
+                {product.stage}
+              </span>
+              <h1 className="text-3xl md:text-4xl font-bold text-abu-green-dark mb-2">{product.name}</h1>
+              {product.commercialName && (
+                <p className="text-xl text-abu-charcoal/50 font-medium mb-4">{product.commercialName}</p>
+              )}
+              <p className="text-abu-charcoal/80 text-lg leading-relaxed">{product.description}</p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 mb-8 bg-abu-cream/50 p-6 rounded-xl border border-abu-earth/10">
+              <div>
+                <p className="text-xs text-abu-charcoal/50 font-semibold uppercase tracking-wider mb-1">Especies</p>
+                <p className="text-abu-charcoal font-medium">{product.species.join(", ")}</p>
+              </div>
+              {product.recommendedAge && (
+                <div>
+                  <p className="text-xs text-abu-charcoal/50 font-semibold uppercase tracking-wider mb-1">Edad de suministro</p>
+                  <p className="text-abu-charcoal font-medium">{product.recommendedAge}</p>
+                </div>
+              )}
+              {product.physicalForm && (
+                <div>
+                  <p className="text-xs text-abu-charcoal/50 font-semibold uppercase tracking-wider mb-1">Forma física</p>
+                  <p className="text-abu-charcoal font-medium capitalize">{product.physicalForm}</p>
+                </div>
+              )}
+              <div>
+                <p className="text-xs text-abu-charcoal/50 font-semibold uppercase tracking-wider mb-1">Presentaciones</p>
+                <p className="text-abu-charcoal font-medium">{product.presentations.join(", ")}</p>
+              </div>
+            </div>
+
+            {/* Analysis */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-abu-green-dark mb-4 border-b border-abu-earth/10 pb-2">Análisis Garantizado</h3>
+              <ul className="space-y-2">
+                {Object.entries(product.guaranteedAnalysis).map(([key, value]) => (
+                  <li key={key} className="flex justify-between items-center py-1">
+                    <span className="text-abu-charcoal/70 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                    <span className="font-semibold text-abu-charcoal">{value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Storage */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-abu-green-dark mb-4 border-b border-abu-earth/10 pb-2">Almacenamiento</h3>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-abu-green shrink-0 mt-0.5" />
+                <p className="text-abu-charcoal/80 text-sm">{product.storageInstructions}</p>
+              </div>
+            </div>
+
+            <div className="mt-auto pt-8 flex gap-4">
+              <Link 
+                href="/contacto" 
+                className="flex-1 bg-abu-green text-white text-center py-4 rounded-md font-bold hover:bg-abu-green-dark transition-colors"
+              >
+                Solicitar cotización
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,33 @@
+export type FeedProduct = {
+  slug: string;
+  name: string;
+  commercialName?: string;
+  species: string[];
+  productionType: "postura" | "engorde" | "desarrollo" | "inicial";
+  stage: string;
+  recommendedAge?: string;
+  description: string;
+  physicalForm?: "harina" | "pellet" | "crumble";
+  presentations: string[];
+  guaranteedAnalysis: {
+    protein?: string;
+    fat?: string;
+    fiber?: string;
+    moisture?: string;
+    calcium?: string;
+    phosphorus?: string;
+    energy?: string;
+  };
+  ingredients?: string[];
+  feedingInstructions?: string;
+  dailyConsumption?: string;
+  storageInstructions: string;
+  shelfLife?: string;
+  agrocalidadRegistration?: string;
+  medicated: boolean;
+  warnings?: string[];
+  technicalSheetUrl?: string;
+  images: string[];
+  available: boolean;
+  requiresQuote: boolean;
+};
