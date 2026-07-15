@@ -1,24 +1,42 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-abu-bg-main: #101A16;
-  --color-abu-bg-sec: #182720;
-  --color-abu-card: #213229;
-  --color-abu-card-elevated: #2B3D31;
-  --color-abu-primary: #D2A72C;
-  --color-abu-primary-hover: #E2BD50;
-  --color-abu-secondary: #52705B;
-  --color-abu-text: #F5F3EA;
-  --color-abu-text-muted: #C9CEC8;
-  --color-abu-border: #3A4C41;
-  --color-abu-earth: #8B6246;
-  --color-abu-error: #C75C4D;
-  --color-abu-success: #65A879;
-  
-  /* Tipo de letra Apple (San Francisco) */
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* ── Fondos ─────────────────────────────── */
+  --color-abu-bg-main:        #0D1610;
+  --color-abu-bg-sec:         #111E18;
+  --color-abu-surface:        #162219;
+  --color-abu-card:           #1C2E24;
+  --color-abu-card-elevated:  #243629;
+
+  /* ── Acento dorado ───────────────────────── */
+  --color-abu-primary:        #C9971A;
+  --color-abu-primary-hover:  #DBA830;
+  --color-abu-accent-gold:    #F0C940;
+
+  /* ── Verde de soporte ────────────────────── */
+  --color-abu-secondary:      #4A6653;
+  --color-abu-secondary-hover:#56775F;
+
+  /* ── Texto ───────────────────────────────── */
+  --color-abu-text:           #F2EFE4;
+  --color-abu-text-muted:     #A8B4A2;
+  --color-abu-text-dim:       #6B7D69;
+
+  /* ── Bordes ──────────────────────────────── */
+  --color-abu-border:         #253B2D;
+  --color-abu-border-gold:    #C9971A40;
+
+  /* ── Sistema ─────────────────────────────── */
+  --color-abu-earth:          #8B6246;
+  --color-abu-error:          #C75C4D;
+  --color-abu-success:        #65A879;
+
+  /* ── Tipografía Apple ────────────────────── */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+/* ── Base ──────────────────────────────────── */
 :root {
   background-color: var(--color-abu-bg-main);
   color: var(--color-abu-text);
@@ -33,7 +51,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Utilities if needed */
+/* ── Utilidades ───────────────────────────── */
 .text-balance {
   text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* ── Gradiente de borde dorado ────────────── */
+.border-gold-glow {
+  box-shadow: 0 0 0 1px var(--color-abu-border-gold);
+}
+
+/* ── Animación de la barra activa en nav ─── */
+@keyframes slideIn {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }

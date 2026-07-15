@@ -1,26 +1,37 @@
-import { CheckCircle2 } from "lucide-react";
-
-const INDICATORS = [
- "Nutrición por etapas",
- "Producción ecuatoriana",
- "Especialización avícola",
- "Atención a productores",
- "Distribución mayorista"
+const STATS = [
+  { value: "4", label: "Etapas nutricionales", suffix: "" },
+  { value: "20", label: "Años de experiencia", suffix: "+" },
+  { value: "2", label: "Provincias de distribución", suffix: "" },
+  { value: "BPM", label: "Certificación de calidad", suffix: "" },
 ];
 
 export default function Indicators() {
- return (
- <section className="bg-abu-bg-sec border-b border-abu-border">
- <div className="container mx-auto px-4 md:px-8 py-8 md:py-12">
- <div className="flex flex-wrap justify-center md:justify-between items-center gap-6">
- {INDICATORS.map((indicator, index) => (
- <div key={index} className="flex items-center gap-2">
- <CheckCircle2 className="w-5 h-5 text-abu-primary" />
- <span className="text-abu-text font-medium text-sm md:text-base">{indicator}</span>
- </div>
- ))}
- </div>
- </div>
- </section>
- );
+  return (
+    <section className="bg-abu-surface border-t border-abu-primary/20 border-b border-abu-border">
+      <div className="container mx-auto px-4 md:px-8 py-12 md:py-14">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
+          {STATS.map((stat, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center md:border-r md:border-abu-border last:border-0 px-4"
+            >
+              <div className="flex items-baseline gap-1 mb-2">
+                <span className="text-4xl md:text-5xl font-black text-abu-primary leading-none">
+                  {stat.value}
+                </span>
+                {stat.suffix && (
+                  <span className="text-2xl font-black text-abu-primary-hover">
+                    {stat.suffix}
+                  </span>
+                )}
+              </div>
+              <span className="text-xs uppercase tracking-widest text-abu-text-muted font-medium">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
