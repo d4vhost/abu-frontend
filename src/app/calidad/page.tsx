@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function CalidadPage() {
  return (
- <div className="pt-24 pb-0 bg-white min-h-screen flex flex-col">
+ <div className="pt-24 pb-0 bg-abu-surface min-h-screen flex flex-col">
  <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center mb-12">
- <h1 className="text-4xl md:text-5xl font-bold text-abu-heading mb-6">Garantía de Calidad</h1>
- <p className="text-lg text-abu-body">
+ <h1 className="text-4xl md:text-5xl font-bold text-abu-white mb-6">Garantía de Calidad</h1>
+ <p className="text-lg text-abu-gray">
  Implementamos rigurosos controles en cada etapa productiva para asegurar que el balanceado llegue en óptimas condiciones a tu granja.
  </p>
  </div>

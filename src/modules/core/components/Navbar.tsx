@@ -30,74 +30,54 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-abu-border-light shadow-sm py-3"
-          : "bg-abu-dark/90 backdrop-blur-sm py-5"
+          ? "bg-abu-bg/95 backdrop-blur-xl border-b border-abu-line py-2.5"
+          : "bg-transparent py-4"
       )}
     >
-      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <span className={cn(
-            "text-2xl font-black tracking-tight transition-colors",
-            isScrolled ? "text-abu-primary" : "text-abu-accent-gold"
-          )}>
-            A.B.U.
-          </span>
-          <span className={cn(
-            "hidden sm:inline-block text-xs uppercase tracking-[0.2em] transition-colors",
-            isScrolled ? "text-abu-caption" : "text-abu-text-muted"
-          )}>
+      <div className="w-full px-6 md:px-10 lg:px-16 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <span className="text-xl font-extrabold tracking-tight text-abu-gold">A.B.U.</span>
+          <span className="hidden sm:inline-block text-[11px] uppercase tracking-[0.2em] text-abu-gray">
             Alimentos Balanceados
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={cn(
-                "relative px-3 py-2 text-sm font-medium transition-colors group",
-                isScrolled
-                  ? "text-abu-body hover:text-abu-primary"
-                  : "text-abu-text-muted hover:text-white"
-              )}
+              className="relative px-3 py-2 text-[13px] font-medium text-abu-gray hover:text-abu-white transition-colors group"
             >
               {link.name}
-              <span className="absolute bottom-0 left-3 right-3 h-px bg-abu-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <span className="absolute bottom-0 left-3 right-3 h-px bg-abu-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </Link>
           ))}
           <Link
             href="/contacto"
-            className="ml-4 bg-abu-primary text-white px-6 py-2.5 font-bold text-sm hover:bg-abu-primary-hover transition-colors"
+            className="ml-3 bg-abu-gold text-abu-bg px-5 py-2 font-semibold text-[13px] hover:bg-abu-gold-hover transition-colors"
           >
             Contacto
           </Link>
         </nav>
 
-        {/* Mobile Toggle */}
         <button
-          className={cn(
-            "lg:hidden p-2 transition-colors",
-            isScrolled ? "text-abu-heading hover:text-abu-primary" : "text-white hover:text-abu-accent-gold"
-          )}
+          className="lg:hidden p-2 text-abu-gray hover:text-abu-gold transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Abrir menú"
+          aria-label="Menú"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-abu-border-light shadow-xl">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
+        <div className="lg:hidden bg-abu-bg/98 backdrop-blur-xl border-t border-abu-line">
+          <div className="px-6 py-4 flex flex-col gap-0.5">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-base font-medium text-abu-body hover:text-abu-primary hover:bg-abu-light px-4 py-3 transition-colors"
+                className="text-sm font-medium text-abu-gray hover:text-abu-gold px-3 py-2.5 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
@@ -105,7 +85,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contacto"
-              className="mt-3 bg-abu-primary text-white text-center px-5 py-3.5 font-bold hover:bg-abu-primary-hover transition-colors"
+              className="mt-3 bg-abu-gold text-abu-bg text-center px-5 py-3 font-semibold text-sm hover:bg-abu-gold-hover transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contacto

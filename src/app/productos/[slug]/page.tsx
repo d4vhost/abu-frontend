@@ -24,16 +24,16 @@ export default async function ProductDetailPage({ params }: Props) {
  }
 
  return (
- <div className="pt-24 pb-20 bg-white min-h-screen">
+ <div className="pt-24 pb-20 bg-abu-surface min-h-screen">
  <div className="container mx-auto px-4 md:px-8 max-w-6xl">
- <Link href="/productos" className="inline-flex items-center text-sm text-abu-body hover:text-abu-primary mb-8 transition-colors">
+ <Link href="/productos" className="inline-flex items-center text-sm text-abu-gray hover:text-abu-gold mb-8 transition-colors">
  <ChevronLeft className="w-4 h-4 mr-1" /> Volver al catálogo
  </Link>
  
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
  {/* Image */}
  <div>
- <div className="relative overflow-hidden aspect-square bg-abu-light border border-abu-border-light">
+ <div className="relative overflow-hidden aspect-square bg-abu-bg-alt border border-abu-line">
  {product.images[0] && (
  // eslint-disable-next-line @next/next/no-img-element
  <img 
@@ -48,47 +48,47 @@ export default async function ProductDetailPage({ params }: Props) {
  {/* Info */}
  <div className="flex flex-col">
  <div className="mb-6">
- <span className="inline-block px-3 py-1 bg-abu-primary/20 text-abu-heading text-xs font-bold -full mb-4">
+ <span className="inline-block px-3 py-1 bg-abu-gold/20 text-abu-white text-xs font-bold -full mb-4">
  {product.stage}
  </span>
- <h1 className="text-3xl md:text-4xl font-bold text-abu-heading mb-2">{product.name}</h1>
+ <h1 className="text-3xl md:text-4xl font-bold text-abu-white mb-2">{product.name}</h1>
  {product.commercialName && (
- <p className="text-xl text-abu-heading/50 font-medium mb-4">{product.commercialName}</p>
+ <p className="text-xl text-abu-white/50 font-medium mb-4">{product.commercialName}</p>
  )}
- <p className="text-abu-heading/80 text-lg leading-relaxed">{product.description}</p>
+ <p className="text-abu-white/80 text-lg leading-relaxed">{product.description}</p>
  </div>
 
- <div className="grid grid-cols-2 gap-4 mb-8 bg-abu-light/50 p-6 border border-abu-border-light">
+ <div className="grid grid-cols-2 gap-4 mb-8 bg-abu-bg-alt/50 p-6 border border-abu-line">
  <div>
- <p className="text-xs text-abu-heading/50 font-semibold uppercase tracking-wider mb-1">Especies</p>
- <p className="text-abu-heading font-medium">{product.species.join(", ")}</p>
+ <p className="text-xs text-abu-white/50 font-semibold uppercase tracking-wider mb-1">Especies</p>
+ <p className="text-abu-white font-medium">{product.species.join(", ")}</p>
  </div>
  {product.recommendedAge && (
  <div>
- <p className="text-xs text-abu-heading/50 font-semibold uppercase tracking-wider mb-1">Edad de suministro</p>
- <p className="text-abu-heading font-medium">{product.recommendedAge}</p>
+ <p className="text-xs text-abu-white/50 font-semibold uppercase tracking-wider mb-1">Edad de suministro</p>
+ <p className="text-abu-white font-medium">{product.recommendedAge}</p>
  </div>
  )}
  {product.physicalForm && (
  <div>
- <p className="text-xs text-abu-heading/50 font-semibold uppercase tracking-wider mb-1">Forma física</p>
- <p className="text-abu-heading font-medium capitalize">{product.physicalForm}</p>
+ <p className="text-xs text-abu-white/50 font-semibold uppercase tracking-wider mb-1">Forma física</p>
+ <p className="text-abu-white font-medium capitalize">{product.physicalForm}</p>
  </div>
  )}
  <div>
- <p className="text-xs text-abu-heading/50 font-semibold uppercase tracking-wider mb-1">Presentaciones</p>
- <p className="text-abu-heading font-medium">{product.presentations.join(", ")}</p>
+ <p className="text-xs text-abu-white/50 font-semibold uppercase tracking-wider mb-1">Presentaciones</p>
+ <p className="text-abu-white font-medium">{product.presentations.join(", ")}</p>
  </div>
  </div>
 
  {/* Analysis */}
  <div className="mb-8">
- <h3 className="text-xl font-bold text-abu-heading mb-4 border-b border-abu-border-light pb-2">Análisis Garantizado</h3>
+ <h3 className="text-xl font-bold text-abu-white mb-4 border-b border-abu-line pb-2">Análisis Garantizado</h3>
  <ul className="space-y-2">
  {Object.entries(product.guaranteedAnalysis).map(([key, value]) => (
  <li key={key} className="flex justify-between items-center py-1">
- <span className="text-abu-body capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
- <span className="font-semibold text-abu-heading">{value}</span>
+ <span className="text-abu-gray capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+ <span className="font-semibold text-abu-white">{value}</span>
  </li>
  ))}
  </ul>
@@ -96,17 +96,17 @@ export default async function ProductDetailPage({ params }: Props) {
 
  {/* Storage */}
  <div className="mb-8">
- <h3 className="text-xl font-bold text-abu-heading mb-4 border-b border-abu-border-light pb-2">Almacenamiento</h3>
+ <h3 className="text-xl font-bold text-abu-white mb-4 border-b border-abu-line pb-2">Almacenamiento</h3>
  <div className="flex items-start gap-3">
- <CheckCircle2 className="w-5 h-5 text-abu-primary shrink-0 mt-0.5" />
- <p className="text-abu-heading/80 text-sm">{product.storageInstructions}</p>
+ <CheckCircle2 className="w-5 h-5 text-abu-gold shrink-0 mt-0.5" />
+ <p className="text-abu-white/80 text-sm">{product.storageInstructions}</p>
  </div>
  </div>
 
  <div className="mt-auto pt-8 flex gap-4">
  <Link 
  href="/contacto" 
- className="flex-1 bg-abu-secondary text-abu-heading text-center py-4 font-bold hover:bg-abu-white transition-colors"
+ className="flex-1 bg-abu-card text-abu-white text-center py-4 font-bold hover:bg-abu-bg transition-colors"
  >
  Solicitar cotización
  </Link>

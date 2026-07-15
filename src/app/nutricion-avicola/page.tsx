@@ -24,36 +24,36 @@ const ARTICLES = [
 
 export default function NutricionAvicolaPage() {
  return (
- <div className="pt-24 pb-20 bg-white min-h-screen">
+ <div className="pt-24 pb-20 bg-abu-surface min-h-screen">
  <div className="container mx-auto px-4 md:px-8 max-w-6xl">
  <div className="text-center mb-16">
- <h1 className="text-4xl md:text-5xl font-bold text-abu-heading mb-4">Nutrición Avícola</h1>
- <p className="text-lg text-abu-body max-w-2xl mx-auto">
+ <h1 className="text-4xl md:text-5xl font-bold text-abu-white mb-4">Nutrición Avícola</h1>
+ <p className="text-lg text-abu-gray max-w-2xl mx-auto">
  Recursos y guías técnicas para ayudarte a optimizar la alimentación en tu granja, mejorando el rendimiento y la salud de tus aves.
  </p>
  </div>
 
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
  {ARTICLES.map((article, idx) => (
- <div key={idx} className="bg-abu-light p-6 border border-abu-border-light flex flex-col hover:shadow-md transition-shadow group">
- <div className="w-12 h-12 bg-white flex items-center justify-center mb-4 text-abu-primary shadow-sm">
+ <div key={idx} className="bg-abu-bg-alt p-6 border border-abu-line flex flex-col hover:shadow-md transition-shadow group">
+ <div className="w-12 h-12 bg-abu-surface flex items-center justify-center mb-4 text-abu-gold shadow-sm">
  <BookOpen className="w-6 h-6" />
  </div>
- <h3 className="text-xl font-bold text-abu-heading mb-3">{article.title}</h3>
- <p className="text-abu-body mb-6 flex-1">{article.excerpt}</p>
- <Link href="#" className="flex items-center text-abu-primary font-semibold text-sm group-hover:text-abu-heading transition-colors">
+ <h3 className="text-xl font-bold text-abu-white mb-3">{article.title}</h3>
+ <p className="text-abu-gray mb-6 flex-1">{article.excerpt}</p>
+ <Link href="#" className="flex items-center text-abu-gold font-semibold text-sm group-hover:text-abu-white transition-colors">
  Leer artículo <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
  </Link>
  </div>
  ))}
  </div>
 
- <div className="bg-abu-white p-8 md:p-12 text-center text-abu-heading">
- <h2 className="text-3xl font-bold text-abu-primary mb-4">¿Tienes dudas sobre formulación?</h2>
- <p className="text-abu-body/80 text-lg mb-8 max-w-2xl mx-auto">
+ <div className="bg-abu-bg p-8 md:p-12 text-center text-abu-white">
+ <h2 className="text-3xl font-bold text-abu-gold mb-4">¿Tienes dudas sobre formulación?</h2>
+ <p className="text-abu-gray/80 text-lg mb-8 max-w-2xl mx-auto">
  Nuestro equipo técnico está dispuesto a asesorarte en la transición alimenticia y en el cálculo de consumo de tu lote.
  </p>
- <Link href="/contacto" className="inline-block bg-white text-abu-heading px-8 py-3 font-bold hover:bg-abu-light transition-colors">
+ <Link href="/contacto" className="inline-block bg-abu-surface text-abu-white px-8 py-3 font-bold hover:bg-abu-bg-alt transition-colors">
  Contactar al equipo técnico
  </Link>
  </div>

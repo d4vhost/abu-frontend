@@ -3,49 +3,40 @@ import { Phone, MapPin, ChevronRight } from "lucide-react";
 
 const COMPANY_LINKS = [
   { name: "Nosotros", href: "/nosotros" },
-  { name: "Proceso de producción", href: "/proceso" },
-  { name: "Garantía de Calidad", href: "/calidad" },
+  { name: "Proceso", href: "/proceso" },
+  { name: "Calidad", href: "/calidad" },
   { name: "Distribuidores", href: "/distribuidores" },
 ];
 
 const PRODUCT_LINKS = [
   { name: "Alimento Inicial", href: "/productos/inicial" },
-  { name: "Crecimiento y Desarrollo", href: "/productos/desarrollo" },
-  { name: "Producción / Postura", href: "/productos/postura" },
+  { name: "Crecimiento", href: "/productos/desarrollo" },
+  { name: "Postura", href: "/productos/postura" },
   { name: "Broiler Engorde", href: "/productos/broiler-engorde" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-abu-dark text-abu-text-muted border-t-2 border-abu-primary">
-      <div className="container mx-auto px-4 md:px-8 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
-
-          {/* Brand */}
+    <footer className="bg-abu-bg border-t border-abu-gold/30">
+      <div className="w-full px-6 md:px-10 lg:px-16 pt-14 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <span className="text-3xl font-black text-abu-accent-gold mb-5 block">A.B.U.</span>
-            <p className="text-xs uppercase tracking-[0.2em] text-abu-text-dim font-medium mb-4">
+            <span className="text-2xl font-extrabold text-abu-gold block mb-4">A.B.U.</span>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-abu-gray-dark font-medium mb-3">
               Alimentos Balanceados Uzcátegui
             </p>
-            <p className="text-sm text-abu-text-muted leading-relaxed">
-              Nutrición balanceada para cada etapa de tus aves. Respaldados
-              por la experiencia de la familia Uzcátegui en el sector avícola ecuatoriano.
+            <p className="text-xs text-abu-gray leading-relaxed">
+              Nutrición balanceada para cada etapa de tus aves.
             </p>
           </div>
 
-          {/* Empresa */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-6">
-              Empresa
-            </h3>
-            <ul className="space-y-3">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-abu-gray mb-5">Empresa</h3>
+            <ul className="space-y-2">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-abu-text-muted hover:text-abu-accent-gold transition-colors flex items-center gap-2 group"
-                  >
-                    <ChevronRight className="w-3 h-3 opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                  <Link href={link.href} className="text-xs text-abu-gray-dark hover:text-abu-gold transition-colors flex items-center gap-1.5 group">
+                    <ChevronRight className="w-2.5 h-2.5 opacity-40 group-hover:opacity-100 transition-all" />
                     {link.name}
                   </Link>
                 </li>
@@ -53,19 +44,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Productos */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-6">
-              Líneas de Productos
-            </h3>
-            <ul className="space-y-3">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-abu-gray mb-5">Productos</h3>
+            <ul className="space-y-2">
               {PRODUCT_LINKS.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-abu-text-muted hover:text-abu-accent-gold transition-colors flex items-center gap-2 group"
-                  >
-                    <ChevronRight className="w-3 h-3 opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                  <Link href={link.href} className="text-xs text-abu-gray-dark hover:text-abu-gold transition-colors flex items-center gap-1.5 group">
+                    <ChevronRight className="w-2.5 h-2.5 opacity-40 group-hover:opacity-100 transition-all" />
                     {link.name}
                   </Link>
                 </li>
@@ -73,45 +58,36 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contacto */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-6">
-              Contacto
-            </h3>
-            <ul className="space-y-5">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-abu-primary shrink-0 mt-0.5" />
-                <div className="text-sm">
-                  <p className="font-medium text-white mb-0.5">Oficina Principal</p>
-                  <p className="text-abu-text-muted leading-relaxed">
-                    Cádiz 021 y av. Los Shyris, Huachi Loreto, Ambato.
-                  </p>
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-abu-gray mb-5">Contacto</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-2.5">
+                <MapPin className="w-3.5 h-3.5 text-abu-gold shrink-0 mt-0.5" />
+                <div className="text-xs">
+                  <p className="font-medium text-abu-white mb-0.5">Oficina</p>
+                  <p className="text-abu-gray-dark leading-relaxed">Cádiz 021, Huachi Loreto, Ambato.</p>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-abu-primary shrink-0 mt-0.5" />
-                <div className="text-sm">
-                  <p className="font-medium text-white mb-0.5">Planta de Procesamiento</p>
-                  <p className="text-abu-text-muted leading-relaxed">
-                    Santo Domingo, km 5 vía Colorados del Búa.
-                  </p>
+              <li className="flex items-start gap-2.5">
+                <MapPin className="w-3.5 h-3.5 text-abu-gold shrink-0 mt-0.5" />
+                <div className="text-xs">
+                  <p className="font-medium text-abu-white mb-0.5">Planta</p>
+                  <p className="text-abu-gray-dark leading-relaxed">Santo Domingo, km 5 vía Colorados del Búa.</p>
                 </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-abu-primary shrink-0" />
-                <p className="text-sm text-abu-text-muted">
-                  03 284 1870 / 098 611 494
-                </p>
+              <li className="flex items-center gap-2.5">
+                <Phone className="w-3.5 h-3.5 text-abu-gold shrink-0" />
+                <p className="text-xs text-abu-gray-dark">03 284 1870 / 098 611 494</p>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-abu-text-dim">
-          <p>© {new Date().getFullYear()} A.B.U. Alimentos Balanceados Uzcátegui. Todos los derechos reservados.</p>
-          <div className="flex items-center gap-6">
-            <Link href="/terminos" className="hover:text-abu-text-muted transition-colors">Términos de servicio</Link>
-            <Link href="/privacidad" className="hover:text-abu-text-muted transition-colors">Privacidad</Link>
+        <div className="pt-6 border-t border-abu-line flex flex-col md:flex-row justify-between items-center gap-3 text-[10px] text-abu-gray-dark">
+          <p>© {new Date().getFullYear()} A.B.U. Alimentos Balanceados Uzcátegui.</p>
+          <div className="flex items-center gap-5">
+            <Link href="/terminos" className="hover:text-abu-gray transition-colors">Términos</Link>
+            <Link href="/privacidad" className="hover:text-abu-gray transition-colors">Privacidad</Link>
           </div>
         </div>
       </div>

@@ -1,72 +1,51 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Fondos oscuros (Hero, CTA, Footer) ──── */
-  --color-abu-dark:           #0F1A14;
-  --color-abu-dark-sec:       #162219;
+  /* ── Fondos oscuros neutros (sin verde) ───── */
+  --color-abu-bg:             #080808;
+  --color-abu-bg-alt:         #0F0F0F;
+  --color-abu-surface:        #161616;
+  --color-abu-card:           #1C1C1C;
+  --color-abu-card-hover:     #242424;
 
-  /* ── Fondos claros (Secciones de contenido) ─ */
-  --color-abu-white:          #FAFAF6;
-  --color-abu-light:          #F2F0E6;
-  --color-abu-light-sec:      #E8E6DC;
+  /* ── Dorado / Acento ──────────────────────── */
+  --color-abu-gold:           #C49A1A;
+  --color-abu-gold-hover:     #D9AE2E;
+  --color-abu-gold-light:     #E8C84040;
+  --color-abu-gold-dim:       #8B6D14;
 
-  /* ── Tarjetas ─────────────────────────────── */
-  --color-abu-card-dark:      #1C2E24;
-  --color-abu-card-light:     #FFFFFF;
-
-  /* ── Acento dorado ─────────────────────────── */
-  --color-abu-primary:        #B8860B;
-  --color-abu-primary-hover:  #D4A017;
-  --color-abu-accent-gold:    #E8C840;
-
-  /* ── Verde de soporte ──────────────────────── */
+  /* ── Verde institucional (solo detalles) ───── */
   --color-abu-green:          #2D5A3F;
-  --color-abu-green-light:    #E8F0EB;
 
-  /* ── Texto oscuro (sobre fondos claros) ────── */
-  --color-abu-heading:        #1A1F1C;
-  --color-abu-body:           #3D4A42;
-  --color-abu-caption:        #7A8580;
+  /* ── Texto ────────────────────────────────── */
+  --color-abu-white:          #F0EDE4;
+  --color-abu-gray:           #8A8A82;
+  --color-abu-gray-dark:      #555550;
 
-  /* ── Texto claro (sobre fondos oscuros) ────── */
-  --color-abu-text:           #F2EFE4;
-  --color-abu-text-muted:     #A8B4A2;
-  --color-abu-text-dim:       #6B7D69;
+  /* ── Bordes ───────────────────────────────── */
+  --color-abu-line:           #222222;
+  --color-abu-line-gold:      #C49A1A30;
 
-  /* ── Bordes ────────────────────────────────── */
-  --color-abu-border-light:   #DDDBD1;
-  --color-abu-border-dark:    #253B2D;
-
-  /* ── Sistema ───────────────────────────────── */
-  --color-abu-earth:          #8B6246;
+  /* ── Sistema ──────────────────────────────── */
   --color-abu-error:          #C75C4D;
   --color-abu-success:        #4A8C5C;
 
-  /* ── Tipografía ────────────────────────────── */
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+  /* ── Tipografía ───────────────────────────── */
+  --font-sans: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* ── Base ──────────────────────────────────── */
 :root {
-  background-color: var(--color-abu-white);
-  color: var(--color-abu-heading);
+  background-color: var(--color-abu-bg);
+  color: var(--color-abu-white);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Utilidades ───────────────────────────── */
-.text-balance {
-  text-wrap: balance;
-}
-
-.text-pretty {
-  text-wrap: pretty;
-}
+.text-balance { text-wrap: balance; }
+.text-pretty  { text-wrap: pretty; }

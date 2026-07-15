@@ -4,80 +4,72 @@ import { ArrowRight } from "lucide-react";
 
 export default function ProductShowcase() {
   return (
-    <section className="py-24 bg-abu-light">
-      <div className="container mx-auto px-4 md:px-8">
-        {/* Header */}
-        <div className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="max-w-xl">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-abu-primary" />
-              <span className="text-xs uppercase tracking-[0.25em] text-abu-primary font-semibold">
+    <section className="py-20 bg-abu-bg-alt">
+      <div className="w-full px-6 md:px-10 lg:px-16">
+        <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="max-w-lg">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-6 h-px bg-abu-gold" />
+              <span className="text-[11px] uppercase tracking-[0.25em] text-abu-gold font-semibold">
                 Líneas de nutrición
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-abu-heading mb-4 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-abu-white mb-3">
               Nuestras Líneas de Productos
             </h2>
-            <p className="text-abu-body text-lg leading-relaxed">
+            <p className="text-abu-gray text-sm leading-relaxed">
               Formulaciones específicas para acompañar cada fase del desarrollo
               y producción de tus aves.
             </p>
           </div>
           <Link
             href="/productos"
-            className="inline-flex items-center gap-2 text-abu-primary font-semibold hover:text-abu-primary-hover group transition-colors shrink-0"
+            className="inline-flex items-center gap-2 text-abu-gold font-semibold text-sm hover:text-abu-gold-hover group transition-colors"
           >
             Ver catálogo completo
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product) => (
             <div
               key={product.slug}
-              className="group bg-white border border-abu-border-light hover:border-abu-primary/40 transition-all duration-300 flex flex-col hover:shadow-xl"
+              className="group bg-abu-surface border border-abu-line hover:border-abu-gold/30 transition-all duration-300 flex flex-col"
             >
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden bg-abu-light">
+              <div className="relative h-48 overflow-hidden bg-abu-card">
                 {product.images[0] && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={product.images[0]}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   />
                 )}
-                <div className="absolute top-0 left-0 bg-abu-primary text-white text-[10px] font-black px-3 py-1.5 tracking-widest uppercase">
+                <div className="absolute top-0 left-0 bg-abu-gold text-abu-bg text-[10px] font-bold px-2.5 py-1 tracking-widest uppercase">
                   {product.stage}
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-bold text-abu-heading mb-2 leading-snug">
-                  {product.name}
-                </h3>
-                <p className="text-abu-body text-sm mb-4 flex-1 leading-relaxed line-clamp-3">
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="text-sm font-bold text-abu-white mb-1.5">{product.name}</h3>
+                <p className="text-abu-gray text-xs mb-3 flex-1 leading-relaxed line-clamp-3">
                   {product.description}
                 </p>
-
-                <div className="text-xs text-abu-caption mb-4">
-                  <span className="font-semibold text-abu-primary">Especies: </span>
+                <div className="text-[10px] text-abu-gray-dark mb-3">
+                  <span className="font-semibold text-abu-gold">Especies: </span>
                   {product.species.join(", ")}
                 </div>
-
-                <div className="flex gap-2 pt-4 border-t border-abu-border-light">
+                <div className="flex gap-2 pt-3 border-t border-abu-line">
                   <Link
                     href={`/productos/${product.slug}`}
-                    className="flex-1 border border-abu-primary text-abu-primary text-center py-2.5 font-semibold text-sm hover:bg-abu-primary hover:text-white transition-all duration-200"
+                    className="flex-1 border border-abu-gold/60 text-abu-gold text-center py-2 font-semibold text-xs hover:bg-abu-gold hover:text-abu-bg transition-all"
                   >
                     Ver ficha
                   </Link>
                   <Link
                     href="/contacto"
-                    className="flex-1 bg-abu-green text-white text-center py-2.5 font-semibold text-sm hover:bg-abu-green/90 transition-colors"
+                    className="flex-1 bg-abu-card text-abu-white text-center py-2 font-semibold text-xs hover:bg-abu-card-hover transition-colors"
                   >
                     Cotizar
                   </Link>
