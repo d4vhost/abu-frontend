@@ -30,13 +30,13 @@ export default function Navbar() {
  className={cn(
  "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
  isScrolled
- ? "bg-abu-green text-abu-cream shadow-md py-3"
- : "bg-abu-green/95 backdrop-blur-sm text-abu-cream py-5"
+ ? "bg-abu-secondary text-abu-text-muted shadow-md py-3"
+ : "bg-abu-secondary/95 backdrop-blur-sm text-abu-text-muted py-5"
  )}
  >
  <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
  <Link href="/" className="flex items-center gap-2 group">
- <span className="text-2xl font-bold tracking-tight text-abu-corn">A.B.U.</span>
+ <span className="text-2xl font-bold tracking-tight text-abu-primary">A.B.U.</span>
  <span className="hidden sm:inline-block text-xs uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
  Alimentos Balanceados
  </span>
@@ -48,14 +48,14 @@ export default function Navbar() {
  <Link
  key={link.name}
  href={link.href}
- className="text-sm font-medium hover:text-abu-corn transition-colors"
+ className="text-sm font-medium hover:text-abu-primary transition-colors"
  >
  {link.name}
  </Link>
  ))}
  <Link
  href="/contacto"
- className="ml-4 bg-abu-corn text-abu-charcoal px-5 py-2 font-semibold text-sm hover:bg-abu-wheat transition-colors flex items-center gap-1"
+ className="ml-4 bg-abu-primary text-abu-text px-5 py-2 font-semibold text-sm hover:bg-abu-primary-hover transition-colors flex items-center gap-1"
  >
  Contacto <ChevronRight className="w-4 h-4" />
  </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
 
  {/* Mobile Toggle */}
  <button
- className="lg:hidden p-2 text-abu-cream hover:text-abu-corn"
+ className="lg:hidden p-2 text-abu-text-muted hover:text-abu-primary"
  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
  >
  {mobileMenuOpen ? <X /> : <Menu />}
@@ -72,12 +72,12 @@ export default function Navbar() {
 
  {/* Mobile Nav */}
  {mobileMenuOpen && (
- <div className="lg:hidden absolute top-full left-0 right-0 bg-abu-green-dark border-t border-white/10 shadow-xl flex flex-col p-4">
+ <div className="lg:hidden absolute top-full left-0 right-0 bg-abu-bg-main border-t border-white/10 shadow-xl flex flex-col p-4">
  {NAV_LINKS.map((link) => (
  <Link
  key={link.name}
  href={link.href}
- className="py-3 px-4 text-abu-cream hover:bg-white/5 hover:text-abu-corn transition-colors"
+ className="py-3 px-4 text-abu-text-muted hover:bg-abu-card/5 hover:text-abu-primary transition-colors"
  onClick={() => setMobileMenuOpen(false)}
  >
  {link.name}
@@ -85,7 +85,7 @@ export default function Navbar() {
  ))}
  <Link
  href="/contacto"
- className="mt-4 bg-abu-corn text-abu-charcoal text-center px-5 py-3 font-semibold hover:bg-abu-wheat transition-colors"
+ className="mt-4 bg-abu-primary text-abu-text text-center px-5 py-3 font-semibold hover:bg-abu-primary-hover transition-colors"
  onClick={() => setMobileMenuOpen(false)}
  >
  Contacto

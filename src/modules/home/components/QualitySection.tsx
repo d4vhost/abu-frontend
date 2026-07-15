@@ -9,7 +9,7 @@ export default function QualitySection() {
  ];
 
  return (
- <section className="py-20 bg-abu-green-dark text-white">
+ <section className="py-20 bg-abu-bg-main text-abu-text">
  <div className="container mx-auto px-4 md:px-8">
  <div className="flex flex-col lg:flex-row items-center gap-12">
  {/* Image side */}
@@ -27,20 +27,20 @@ export default function QualitySection() {
  
  {/* Content side */}
  <div className="w-full lg:w-1/2">
- <h2 className="text-3xl md:text-4xl font-bold text-abu-corn mb-6">Compromiso con la Calidad</h2>
- <p className="text-abu-cream/80 text-lg mb-10 leading-relaxed">
+ <h2 className="text-3xl md:text-4xl font-bold text-abu-primary mb-6">Compromiso con la Calidad</h2>
+ <p className="text-abu-text-muted/80 text-lg mb-10 leading-relaxed">
  Trabajamos para mantener la uniformidad en cada lote y entregar alimentos adecuados para las diferentes etapas productivas de tus aves. Respaldados por entidades regulatorias y de control.
  </p>
  
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
  {items.map((item, idx) => (
  <div key={idx} className="flex gap-4">
- <div className="bg-white/10 p-3 shrink-0 h-fit">
- <item.icon className="w-6 h-6 text-abu-corn" />
+ <div className="bg-abu-card/10 p-3 shrink-0 h-fit">
+ <item.icon className="w-6 h-6 text-abu-primary" />
  </div>
  <div>
- <h4 className="font-bold text-white mb-1">{item.title}</h4>
- <p className="text-sm text-abu-cream/60">{item.desc}</p>
+ <h4 className="font-bold text-abu-text mb-1">{item.title}</h4>
+ <p className="text-sm text-abu-text-muted/60">{item.desc}</p>
  </div>
  </div>
  ))}

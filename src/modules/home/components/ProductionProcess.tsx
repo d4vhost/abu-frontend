@@ -43,20 +43,20 @@ export default function ProductionProcess() {
  ];
 
  return (
- <section className="py-24 bg-abu-cream relative overflow-hidden">
- <div className="absolute top-0 right-0 w-1/2 h-full bg-abu-wheat/20 -z-10" />
+ <section className="py-24 bg-abu-bg-sec relative overflow-hidden">
+ <div className="absolute top-0 right-0 w-1/2 h-full bg-abu-card-elevated -z-10" />
  
  <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
  <div className="text-center mb-16">
- <h2 className="text-3xl md:text-5xl font-bold text-abu-green-dark mb-4">Nuestro Proceso</h2>
- <p className="text-abu-charcoal/70 text-lg max-w-2xl mx-auto">
+ <h2 className="text-3xl md:text-5xl font-bold text-abu-text mb-4">Nuestro Proceso</h2>
+ <p className="text-abu-text-muted text-lg max-w-2xl mx-auto">
  Desde la selección del grano hasta la entrega en tu granja, controlamos cada paso para garantizar inocuidad y nutrición superior.
  </p>
  </div>
 
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
  {PROCESS_STEPS.map((step, idx) => (
- <div key={idx} className="relative bg-abu-green-dark p-6 h-64 shadow-sm border border-abu-earth/5 hover:shadow-md transition-shadow group overflow-hidden flex flex-col justify-end">
+ <div key={idx} className="relative bg-abu-bg-main p-6 h-64 shadow-sm border border-abu-border hover:shadow-md transition-shadow group overflow-hidden flex flex-col justify-end">
  <div 
  className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110 z-0 opacity-50 group-hover:opacity-40"
  style={{ backgroundImage: `url(${step.image})` }}
@@ -64,11 +64,11 @@ export default function ProductionProcess() {
  <div className="absolute inset-0 bg-gradient-to-t from-abu-green-dark via-abu-green-dark/80 to-transparent z-0" />
  
  <div className="relative z-10">
- <div className="text-abu-corn font-black text-5xl mb-2 opacity-50 group-hover:opacity-100 transition-opacity">
+ <div className="text-abu-primary font-black text-5xl mb-2 opacity-50 group-hover:opacity-100 transition-opacity">
  {String(idx + 1).padStart(2, '0')}
  </div>
- <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
- <p className="text-abu-cream/80 text-sm">{step.description}</p>
+ <h3 className="text-xl font-bold text-abu-text mb-2">{step.title}</h3>
+ <p className="text-abu-text-muted/80 text-sm">{step.description}</p>
  </div>
  </div>
  ))}
