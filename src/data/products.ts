@@ -22,7 +22,7 @@ export const products: FeedProduct[] = [
     },
     storageInstructions: "Almacenar en un lugar fresco, seco y ventilado, sobre estibas de madera, libre de luz solar directa e insectos.",
     medicated: false,
-    images: ["https://images.unsplash.com/photo-1548681528-6a5e45b5cb59?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"], // pollitos
+    images: ["https://images.unsplash.com/photo-1560293414-2c5e53fa7c58?auto=format&fit=crop&w=800&q=80"], // pollitos
     available: true,
     requiresQuote: true,
   },
@@ -45,7 +45,7 @@ export const products: FeedProduct[] = [
     },
     storageInstructions: "Almacenar en un lugar fresco, seco y ventilado, sobre estibas de madera, libre de luz solar directa e insectos.",
     medicated: false,
-    images: ["https://images.unsplash.com/photo-1590682680695-43b964a3ae17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"], // gallina joven
+    images: ["https://images.unsplash.com/photo-1604856085189-bcafdbccbfcb?auto=format&fit=crop&w=800&q=80"], // gallina joven
     available: true,
     requiresQuote: true,
   },
@@ -67,7 +67,7 @@ export const products: FeedProduct[] = [
     },
     storageInstructions: "Almacenar en un lugar fresco, seco y ventilado, sobre estibas de madera.",
     medicated: false,
-    images: ["https://images.unsplash.com/photo-1583091917711-c8cbdd63012a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"], // huevos/gallinas
+    images: ["https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80"], // huevos/gallinas
     available: true,
     requiresQuote: true,
   },
@@ -89,7 +89,7 @@ export const products: FeedProduct[] = [
     },
     storageInstructions: "Almacenar en un lugar fresco, seco y ventilado, sobre estibas de madera.",
     medicated: false,
-    images: ["https://images.unsplash.com/photo-1615307524249-16f56cebb0b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"], // pollos engorde/granja
+    images: ["https://images.unsplash.com/photo-1558222218-b7b54eede3f3?auto=format&fit=crop&w=800&q=80"], // pollos engorde/granja
     available: true,
     requiresQuote: true,
   }

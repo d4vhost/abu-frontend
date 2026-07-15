@@ -22,7 +22,7 @@ export default function ProductosPage() {
             <Link 
               href={`/productos/${product.slug}`} 
               key={product.slug} 
-              className="group flex flex-col bg-abu-cream rounded-xl overflow-hidden border border-abu-earth/10 hover:shadow-xl transition-all duration-300"
+              className="group flex flex-col bg-abu-cream rounded-sm overflow-hidden border border-abu-earth/10 hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden bg-gray-200">
                 {product.images[0] && (

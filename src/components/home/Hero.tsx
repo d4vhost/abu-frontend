@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1628189680385-d6e8e89574e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=1920&q=80')" }}
       />
       <div className="absolute inset-0 z-10 bg-abu-green-dark/75" />
 
@@ -26,13 +26,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Link 
               href="/productos" 
-              className="bg-abu-corn text-abu-charcoal px-8 py-4 rounded-md font-bold text-lg hover:bg-abu-wheat transition-colors flex items-center justify-center gap-2"
+              className="bg-abu-corn text-abu-charcoal px-8 py-4 rounded-sm font-bold text-lg hover:bg-abu-wheat transition-colors flex items-center justify-center gap-2"
             >
               Conocer productos <ChevronRight className="w-5 h-5" />
             </Link>
             <Link 
               href="/contacto" 
-              className="bg-transparent text-white border-2 border-white/30 px-8 py-4 rounded-md font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center"
+              className="bg-transparent text-white border-2 border-white/30 px-8 py-4 rounded-sm font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               Solicitar cotización
             </Link>

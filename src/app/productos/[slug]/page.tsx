@@ -33,7 +33,7 @@ export default async function ProductDetailPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Image */}
           <div>
-            <div className="relative rounded-2xl overflow-hidden aspect-square bg-abu-cream border border-abu-earth/10">
+            <div className="relative rounded-sm overflow-hidden aspect-square bg-abu-cream border border-abu-earth/10">
               {product.images[0] && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img 
@@ -58,7 +58,7 @@ export default async function ProductDetailPage({ params }: Props) {
               <p className="text-abu-charcoal/80 text-lg leading-relaxed">{product.description}</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-8 bg-abu-cream/50 p-6 rounded-xl border border-abu-earth/10">
+            <div className="grid grid-cols-2 gap-4 mb-8 bg-abu-cream/50 p-6 rounded-sm border border-abu-earth/10">
               <div>
                 <p className="text-xs text-abu-charcoal/50 font-semibold uppercase tracking-wider mb-1">Especies</p>
                 <p className="text-abu-charcoal font-medium">{product.species.join(", ")}</p>
@@ -106,7 +106,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="mt-auto pt-8 flex gap-4">
               <Link 
                 href="/contacto" 
-                className="flex-1 bg-abu-green text-white text-center py-4 rounded-md font-bold hover:bg-abu-green-dark transition-colors"
+                className="flex-1 bg-abu-green text-white text-center py-4 rounded-sm font-bold hover:bg-abu-green-dark transition-colors"
               >
                 Solicitar cotización
               </Link>

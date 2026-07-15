@@ -38,34 +38,34 @@ export default function DistribuidoresPage() {
 
           {/* Form */}
           <div className="lg:w-1/2">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-abu-earth/10">
+            <div className="bg-white p-8 rounded-sm shadow-sm border border-abu-earth/10">
               <h2 className="text-2xl font-bold text-abu-green-dark mb-6">Solicitud de Distribuidor</h2>
               <form className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-abu-charcoal/70 mb-1">Nombre o Razón Social</label>
-                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-md focus:outline-none focus:border-abu-green transition-colors" />
+                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-sm focus:outline-none focus:border-abu-green transition-colors" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-abu-charcoal/70 mb-1">RUC</label>
-                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-md focus:outline-none focus:border-abu-green transition-colors" />
+                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-sm focus:outline-none focus:border-abu-green transition-colors" />
                   </div>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-abu-charcoal/70 mb-1">Provincia y Ciudad</label>
-                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-md focus:outline-none focus:border-abu-green transition-colors" />
+                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-sm focus:outline-none focus:border-abu-green transition-colors" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-abu-charcoal/70 mb-1">Teléfono</label>
-                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-md focus:outline-none focus:border-abu-green transition-colors" />
+                    <input type="text" className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-sm focus:outline-none focus:border-abu-green transition-colors" />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-abu-charcoal/70 mb-1">Volumen mensual estimado (Sacos)</label>
-                  <select className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-md focus:outline-none focus:border-abu-green transition-colors">
+                  <select className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-sm focus:outline-none focus:border-abu-green transition-colors">
                     <option>Menos de 100</option>
                     <option>100 a 500</option>
                     <option>500 a 1000</option>
@@ -75,10 +75,10 @@ export default function DistribuidoresPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-abu-charcoal/70 mb-1">Mensaje o consulta adicional</label>
-                  <textarea rows={4} className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-md focus:outline-none focus:border-abu-green transition-colors"></textarea>
+                  <textarea rows={4} className="w-full px-4 py-2 bg-abu-cream/30 border border-abu-earth/20 rounded-sm focus:outline-none focus:border-abu-green transition-colors"></textarea>
                 </div>
 
-                <button type="button" className="w-full bg-abu-green text-white font-bold py-3 rounded-md hover:bg-abu-green-dark transition-colors">
+                <button type="button" className="w-full bg-abu-green text-white font-bold py-3 rounded-sm hover:bg-abu-green-dark transition-colors">
                   Enviar Solicitud
                 </button>
               </form>

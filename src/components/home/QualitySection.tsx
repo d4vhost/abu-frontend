@@ -14,10 +14,10 @@ export default function QualitySection() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image side */}
           <div className="w-full lg:w-1/2">
-            <div className="relative rounded-2xl overflow-hidden aspect-video lg:aspect-square">
+            <div className="relative rounded-sm overflow-hidden aspect-video lg:aspect-square">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1000&q=80" 
                 alt="Control de calidad en laboratorio" 
                 className="w-full h-full object-cover opacity-80"
               />
@@ -35,7 +35,7 @@ export default function QualitySection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {items.map((item, idx) => (
                 <div key={idx} className="flex gap-4">
-                  <div className="bg-white/10 p-3 rounded-lg shrink-0 h-fit">
+                  <div className="bg-white/10 p-3 rounded-sm shrink-0 h-fit">
                     <item.icon className="w-6 h-6 text-abu-corn" />
                   </div>
                   <div>

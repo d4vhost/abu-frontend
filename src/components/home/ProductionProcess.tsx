@@ -13,7 +13,7 @@ export default function ProductionProcess() {
   return (
     <section className="py-24 bg-abu-cream relative overflow-hidden">
       {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-abu-wheat/20 rounded-l-[100px] -z-10" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-abu-wheat/20 rounded-l-sm -z-10" />
 
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -25,7 +25,7 @@ export default function ProductionProcess() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 relative">
           {steps.map((step, idx) => (
-            <div key={idx} className="relative bg-white p-6 rounded-xl shadow-sm border border-abu-earth/5 hover:shadow-md transition-shadow group">
+            <div key={idx} className="relative bg-white p-6 rounded-sm shadow-sm border border-abu-earth/5 hover:shadow-md transition-shadow group">
               <div className="text-4xl font-black text-abu-corn/20 mb-2 group-hover:text-abu-corn/40 transition-colors">
                 {String(idx + 1).padStart(2, '0')}
               </div>

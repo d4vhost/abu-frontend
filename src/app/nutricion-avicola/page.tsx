@@ -35,8 +35,8 @@ export default function NutricionAvicolaPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {ARTICLES.map((article, idx) => (
-            <div key={idx} className="bg-abu-cream rounded-xl p-6 border border-abu-earth/10 flex flex-col hover:shadow-md transition-shadow group">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-abu-corn shadow-sm">
+            <div key={idx} className="bg-abu-cream rounded-sm p-6 border border-abu-earth/10 flex flex-col hover:shadow-md transition-shadow group">
+              <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center mb-4 text-abu-corn shadow-sm">
                 <BookOpen className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-abu-green-dark mb-3">{article.title}</h3>
@@ -48,12 +48,12 @@ export default function NutricionAvicolaPage() {
           ))}
         </div>
 
-        <div className="bg-abu-green-dark rounded-2xl p-8 md:p-12 text-center text-white">
+        <div className="bg-abu-green-dark rounded-sm p-8 md:p-12 text-center text-white">
           <h2 className="text-3xl font-bold text-abu-corn mb-4">¿Tienes dudas sobre formulación?</h2>
           <p className="text-abu-cream/80 text-lg mb-8 max-w-2xl mx-auto">
             Nuestro equipo técnico está dispuesto a asesorarte en la transición alimenticia y en el cálculo de consumo de tu lote.
           </p>
-          <Link href="/contacto" className="inline-block bg-white text-abu-green-dark px-8 py-3 rounded-md font-bold hover:bg-abu-cream transition-colors">
+          <Link href="/contacto" className="inline-block bg-white text-abu-green-dark px-8 py-3 rounded-sm font-bold hover:bg-abu-cream transition-colors">
             Contactar al equipo técnico
           </Link>
         </div>

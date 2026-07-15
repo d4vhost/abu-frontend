@@ -77,7 +77,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="py-3 px-4 text-abu-cream hover:bg-white/5 hover:text-abu-corn rounded-md transition-colors"
+              className="py-3 px-4 text-abu-cream hover:bg-white/5 hover:text-abu-corn rounded-sm transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}

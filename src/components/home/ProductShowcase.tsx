@@ -20,7 +20,7 @@ export default function ProductShowcase() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <div key={product.slug} className="group bg-abu-cream rounded-xl overflow-hidden border border-abu-earth/10 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+            <div key={product.slug} className="group bg-abu-cream rounded-sm overflow-hidden border border-abu-earth/10 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
               {/* Product Image */}
               <div className="relative h-48 overflow-hidden bg-gray-200">
                 {product.images[0] && (
@@ -50,13 +50,13 @@ export default function ProductShowcase() {
                   <div className="flex gap-2 mt-4 pt-4 border-t border-abu-earth/10">
                     <Link 
                       href={`/productos/${product.slug}`}
-                      className="flex-1 bg-white border border-abu-green text-abu-green text-center py-2 rounded-md font-medium text-sm hover:bg-abu-green hover:text-white transition-colors"
+                      className="flex-1 bg-white border border-abu-green text-abu-green text-center py-2 rounded-sm font-medium text-sm hover:bg-abu-green hover:text-white transition-colors"
                     >
                       Ver ficha
                     </Link>
                     <Link 
                       href="/contacto"
-                      className="flex-1 bg-abu-green text-white text-center py-2 rounded-md font-medium text-sm hover:bg-abu-green-dark transition-colors"
+                      className="flex-1 bg-abu-green text-white text-center py-2 rounded-sm font-medium text-sm hover:bg-abu-green-dark transition-colors"
                     >
                       Cotizar
                     </Link>

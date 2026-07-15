@@ -14,13 +14,13 @@ export default function ContactCTA() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link 
             href="/distribuidores" 
-            className="bg-abu-green text-white px-8 py-4 rounded-md font-bold hover:bg-abu-green-dark transition-colors flex items-center justify-center gap-2"
+            className="bg-abu-green text-white px-8 py-4 rounded-sm font-bold hover:bg-abu-green-dark transition-colors flex items-center justify-center gap-2"
           >
             Quiero ser distribuidor <ArrowRight className="w-5 h-5" />
           </Link>
           <Link 
             href="/contacto" 
-            className="bg-transparent border-2 border-abu-green text-abu-green px-8 py-4 rounded-md font-bold hover:bg-abu-green/5 transition-colors flex items-center justify-center"
+            className="bg-transparent border-2 border-abu-green text-abu-green px-8 py-4 rounded-sm font-bold hover:bg-abu-green/5 transition-colors flex items-center justify-center"
           >
             Contactar a un asesor
           </Link>
