@@ -11,12 +11,8 @@ export default function ProductionProcess() {
   ];
 
   return (
-    <section className="py-24 bg-abu-bg-main border-t border-abu-primary/20 relative overflow-hidden">
-      {/* Background texture stripe */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-abu-surface/40 hidden lg:block" />
-      <div className="absolute right-1/3 top-0 bottom-0 w-px bg-abu-border hidden lg:block" />
-
-      <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+    <section className="py-24 bg-abu-white">
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="flex items-center gap-3 mb-4">
@@ -25,10 +21,10 @@ export default function ProductionProcess() {
               Cómo trabajamos
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-abu-text mb-4 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-abu-heading mb-4 leading-tight">
             Nuestro Proceso
           </h2>
-          <p className="text-abu-text-muted text-lg leading-relaxed">
+          <p className="text-abu-body text-lg leading-relaxed">
             Desde la selección del grano hasta la entrega en tu granja,
             controlamos cada paso para garantizar inocuidad y nutrición consistente.
           </p>
@@ -39,25 +35,25 @@ export default function ProductionProcess() {
           {PROCESS_STEPS.map((step, idx) => (
             <div
               key={idx}
-              className="group relative h-60 overflow-hidden bg-abu-card border border-abu-border hover:border-abu-primary/50 transition-all duration-300 cursor-default"
+              className="group relative h-64 overflow-hidden bg-abu-dark cursor-default border border-abu-border-light hover:shadow-xl transition-all duration-300"
             >
               {/* Background image */}
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-30 group-hover:opacity-50"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-60"
                 style={{ backgroundImage: `url(${step.image})` }}
               />
               {/* Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-abu-bg-main via-abu-bg-main/70 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-abu-dark via-abu-dark/70 to-abu-dark/30" />
               {/* Gold left border on hover */}
-              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-abu-primary scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom" />
+              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-abu-primary scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom z-10" />
 
               {/* Content */}
               <div className="absolute inset-0 p-5 flex flex-col justify-end z-10">
-                <div className="text-abu-primary font-black text-4xl leading-none mb-2 opacity-40 group-hover:opacity-80 transition-opacity duration-300">
+                <div className="text-abu-accent-gold font-black text-4xl leading-none mb-2 opacity-40 group-hover:opacity-80 transition-opacity duration-300">
                   {String(idx + 1).padStart(2, "0")}
                 </div>
-                <h3 className="text-base font-bold text-abu-text mb-1">{step.title}</h3>
-                <p className="text-abu-text-muted text-xs leading-relaxed">{step.description}</p>
+                <h3 className="text-base font-bold text-white mb-1">{step.title}</h3>
+                <p className="text-white/70 text-xs leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

@@ -7,13 +7,13 @@ const STATS = [
 
 export default function Indicators() {
   return (
-    <section className="bg-abu-surface border-t border-abu-primary/20 border-b border-abu-border">
-      <div className="container mx-auto px-4 md:px-8 py-12 md:py-14">
+    <section className="bg-abu-white border-b border-abu-border-light">
+      <div className="container mx-auto px-4 md:px-8 py-14 md:py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
           {STATS.map((stat, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center md:border-r md:border-abu-border last:border-0 px-4"
+              className="flex flex-col items-center text-center md:border-r md:border-abu-border-light md:last:border-0 px-4"
             >
               <div className="flex items-baseline gap-1 mb-2">
                 <span className="text-4xl md:text-5xl font-black text-abu-primary leading-none">
@@ -25,7 +25,7 @@ export default function Indicators() {
                   </span>
                 )}
               </div>
-              <span className="text-xs uppercase tracking-widest text-abu-text-muted font-medium">
+              <span className="text-xs uppercase tracking-widest text-abu-caption font-medium">
                 {stat.label}
               </span>
             </div>

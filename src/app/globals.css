@@ -1,45 +1,56 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Fondos ─────────────────────────────── */
-  --color-abu-bg-main:        #0D1610;
-  --color-abu-bg-sec:         #111E18;
-  --color-abu-surface:        #162219;
-  --color-abu-card:           #1C2E24;
-  --color-abu-card-elevated:  #243629;
+  /* ── Fondos oscuros (Hero, CTA, Footer) ──── */
+  --color-abu-dark:           #0F1A14;
+  --color-abu-dark-sec:       #162219;
 
-  /* ── Acento dorado ───────────────────────── */
-  --color-abu-primary:        #C9971A;
-  --color-abu-primary-hover:  #DBA830;
-  --color-abu-accent-gold:    #F0C940;
+  /* ── Fondos claros (Secciones de contenido) ─ */
+  --color-abu-white:          #FAFAF6;
+  --color-abu-light:          #F2F0E6;
+  --color-abu-light-sec:      #E8E6DC;
 
-  /* ── Verde de soporte ────────────────────── */
-  --color-abu-secondary:      #4A6653;
-  --color-abu-secondary-hover:#56775F;
+  /* ── Tarjetas ─────────────────────────────── */
+  --color-abu-card-dark:      #1C2E24;
+  --color-abu-card-light:     #FFFFFF;
 
-  /* ── Texto ───────────────────────────────── */
+  /* ── Acento dorado ─────────────────────────── */
+  --color-abu-primary:        #B8860B;
+  --color-abu-primary-hover:  #D4A017;
+  --color-abu-accent-gold:    #E8C840;
+
+  /* ── Verde de soporte ──────────────────────── */
+  --color-abu-green:          #2D5A3F;
+  --color-abu-green-light:    #E8F0EB;
+
+  /* ── Texto oscuro (sobre fondos claros) ────── */
+  --color-abu-heading:        #1A1F1C;
+  --color-abu-body:           #3D4A42;
+  --color-abu-caption:        #7A8580;
+
+  /* ── Texto claro (sobre fondos oscuros) ────── */
   --color-abu-text:           #F2EFE4;
   --color-abu-text-muted:     #A8B4A2;
   --color-abu-text-dim:       #6B7D69;
 
-  /* ── Bordes ──────────────────────────────── */
-  --color-abu-border:         #253B2D;
-  --color-abu-border-gold:    #C9971A40;
+  /* ── Bordes ────────────────────────────────── */
+  --color-abu-border-light:   #DDDBD1;
+  --color-abu-border-dark:    #253B2D;
 
-  /* ── Sistema ─────────────────────────────── */
+  /* ── Sistema ───────────────────────────────── */
   --color-abu-earth:          #8B6246;
   --color-abu-error:          #C75C4D;
-  --color-abu-success:        #65A879;
+  --color-abu-success:        #4A8C5C;
 
-  /* ── Tipografía Apple ────────────────────── */
+  /* ── Tipografía ────────────────────────────── */
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
                "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ── Base ──────────────────────────────────── */
 :root {
-  background-color: var(--color-abu-bg-main);
-  color: var(--color-abu-text);
+  background-color: var(--color-abu-white);
+  color: var(--color-abu-heading);
 }
 
 html {
@@ -58,15 +69,4 @@ body {
 
 .text-pretty {
   text-wrap: pretty;
-}
-
-/* ── Gradiente de borde dorado ────────────── */
-.border-gold-glow {
-  box-shadow: 0 0 0 1px var(--color-abu-border-gold);
-}
-
-/* ── Animación de la barra activa en nav ─── */
-@keyframes slideIn {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
 }

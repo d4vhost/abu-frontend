@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function NosotrosPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-abu-bg-main">
-      <Reveal><AboutHero /></Reveal>
+    <main className="flex flex-col">
+      <AboutHero />
       <Reveal><HistorySection /></Reveal>
       <Reveal><TimelineSection /></Reveal>
       <Reveal><MissionVisionSection /></Reveal>

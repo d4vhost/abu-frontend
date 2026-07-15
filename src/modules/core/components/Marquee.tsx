@@ -11,25 +11,18 @@ export default function Marquee() {
     "Distribución mayorista"
   ];
 
-  // We duplicate the items to create a seamless loop
   const duplicatedItems = [...items, ...items];
 
   return (
-    <div className="w-full overflow-hidden bg-abu-bg-sec border-y border-abu-border py-4">
+    <div className="w-full overflow-hidden bg-abu-dark-sec border-t border-white/10 py-4">
       <motion.div
         className="flex whitespace-nowrap gap-12 w-max"
-        animate={{
-          x: ['0%', '-50%']
-        }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration: 25 // 25 seconds for a full loop
-        }}
+        animate={{ x: ['0%', '-50%'] }}
+        transition={{ repeat: Infinity, ease: "linear", duration: 25 }}
       >
         {duplicatedItems.map((item, idx) => (
           <div key={idx} className="flex items-center gap-12">
-            <span className="text-abu-text font-bold text-lg tracking-wider uppercase">
+            <span className="text-white/80 font-bold text-lg tracking-wider uppercase">
               {item}
             </span>
             <span className="text-abu-primary text-xl">✦</span>

@@ -9,7 +9,7 @@ const QUALITY_ITEMS = [
 
 export default function QualitySection() {
   return (
-    <section className="py-24 bg-abu-bg-sec border-t border-abu-primary/20">
+    <section className="py-24 bg-abu-light">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16">
           {/* Image side */}
@@ -21,10 +21,9 @@ export default function QualitySection() {
                 alt="Control de calidad en instalaciones A.B.U."
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-abu-bg-main/80 via-abu-bg-main/20 to-transparent" />
-              {/* Gold accent corner */}
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-abu-primary" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-abu-primary" />
+              {/* Gold corner accents */}
+              <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-abu-primary" />
+              <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-abu-primary" />
             </div>
           </div>
 
@@ -36,10 +35,10 @@ export default function QualitySection() {
                 Respaldo institucional
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-abu-text mb-5 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-abu-heading mb-5 leading-tight">
               Compromiso con la Calidad
             </h2>
-            <p className="text-abu-text-muted text-lg mb-10 leading-relaxed">
+            <p className="text-abu-body text-lg mb-10 leading-relaxed">
               Trabajamos para mantener la uniformidad en cada lote y entregar
               alimentos adecuados para las diferentes etapas productivas de
               tus aves, respaldados por entidades regulatorias.
@@ -48,12 +47,12 @@ export default function QualitySection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {QUALITY_ITEMS.map((item, idx) => (
                 <div key={idx} className="flex gap-4 group">
-                  <div className="shrink-0 w-10 h-10 bg-abu-primary/10 border border-abu-primary/20 flex items-center justify-center group-hover:bg-abu-primary/20 transition-colors">
-                    <item.icon className="w-5 h-5 text-abu-primary" />
+                  <div className="shrink-0 w-10 h-10 bg-abu-green-light border border-abu-green/20 flex items-center justify-center group-hover:bg-abu-primary/10 group-hover:border-abu-primary/30 transition-colors">
+                    <item.icon className="w-5 h-5 text-abu-green group-hover:text-abu-primary transition-colors" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-abu-text mb-1 text-sm">{item.title}</h4>
-                    <p className="text-xs text-abu-text-muted leading-relaxed">{item.desc}</p>
+                    <h4 className="font-semibold text-abu-heading mb-1 text-sm">{item.title}</h4>
+                    <p className="text-xs text-abu-caption leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
