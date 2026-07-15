@@ -14,6 +14,9 @@
   --color-abu-earth: #8B6246;
   --color-abu-error: #C75C4D;
   --color-abu-success: #65A879;
+  
+  /* Tipo de letra Apple (San Francisco) */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 :root {

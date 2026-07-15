@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/modules/core/components/Navbar";
 import Footer from "@/modules/core/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
  title: "A.B.U. - Alimentos Balanceados Uzcátegui",
@@ -18,7 +15,7 @@ export default function RootLayout({
 }>) {
  return (
  <html lang="es">
- <body className={`${inter.className} min-h-screen flex flex-col`}>
+ <body className="font-sans min-h-screen flex flex-col">
  <Navbar />
  <main className="flex-1">{children}</main>
  <Footer />
